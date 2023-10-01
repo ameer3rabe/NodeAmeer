@@ -1,0 +1,38 @@
+<%- include("page_top.ejs") %>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>jobtitle</th>
+        </tr>
+        </thead>
+        <tbody id="mainTable">  </tbody>
+    </table>
+
+    <h1>Add Employee</h1>
+    <form action="/Workers/Add" method="post" id="employeeForm">
+        <input type="text" name="first_name"   id="first_name"   placeholder="FirstName "/> <br><br>
+        <input type="text" name="last_name"    id="last_name "   placeholder="LastName "/> <br><br>
+        <input type="text" name="job_title"  id="job_title"  placeholder="jobtitle"/> <br><br>
+        <button type="submit" onclick="addNewEmployee()">Add</button>
+    </form>
+    <h1>Delete Employee by id</h1>
+    <div>
+        <input type="text" name="employee_id" id="employee_id" placeholder="Employee ID"/>
+        <button type="button" onclick="deleteEmployee()">Delete</button>
+    </div>
+    <h1>Update Employee by id</h1>
+    <div>
+        <input type="text" name="id" id="edit_employee_id" placeholder="Employee ID"/>
+        <input type="text" name="first_name" id="edit_first_name" placeholder="First Name"/><br><br>
+        <input type="text" name="last_name" id="edit_last_name" placeholder="Last Name"/><br><br>
+        <input type="text" name="job_title" id="edit_job_title" placeholder="job title"/><br><br>
+        <button onclick="editEmployee()">Edit</button>
+    </div>
+
+
+</main>
+<script src="workers_crud.js"></script>
+<%- include("page_bottom.ejs") %>

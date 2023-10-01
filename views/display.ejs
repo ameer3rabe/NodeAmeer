@@ -1,0 +1,18 @@
+<%- include("page_top.ejs") %>
+<main>
+    <p>Select Employee:
+        <select id="SelectEmployee" onchange="loadEmployeeData()"></select>
+    </p>
+    <table>
+        <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Entry Time</th>
+            <th>Exit Time</th>
+        </tr>
+        </thead>
+        <tbody id="entryExitTable"></tbody>
+    </table>
+</main>
+<script src="displayemployees.js"></script>
+<%- include("page_bottom.ejs") %>
